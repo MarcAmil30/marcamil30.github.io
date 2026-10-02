@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,195 +10,212 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
 </head>
 <body>
 
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle colour theme">
-  <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-</button>
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.6 2L12 12.4 19.4 7H4.6ZM4 8.5V17h16V8.5l-7.4 5.4a1 1 0 0 1-1.2 0L4 8.5Z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.86-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23Zm-1.16 17.52h1.83L7.08 4.13H5.12Z"/></symbol>
+  <symbol id="i-substack" viewBox="0 0 24 24"><path d="M22.54 8.24H1.46V5.41h21.08v2.83ZM1.46 10.81V24L12 18.11 22.54 24V10.81H1.46ZM22.54 0H1.46v2.84h21.08V0Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58l-.01-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.08-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.41-1.31.75-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3Z"/></symbol>
+</defs></svg>
+
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
 
 <main class="wrap">
 
   <!-- ─────────── header ─────────── -->
   <header class="hero">
+    <div class="avatar">
+      <img src="assets/img/marc.jpg" alt="Marc Amil"
+           onerror="this.closest('.avatar').classList.add('is-empty');this.remove();">
+      <span class="avatar__mono" aria-hidden="true">MA</span>
+    </div>
+
     <h1>Marc Amil</h1>
-    <p class="hero__role">PhD researcher — generative AI for DNA design</p>
-    <p class="hero__blurb">
-      I build models that read and write DNA. Currently at
-      <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>,
-      where I work on generative models for <em>de&nbsp;novo</em> DNA design and on using
-      genomic language models to predict and control gene expression. Before that:
-      neurotechnology, microfluidics, biosensors, and a lot of protein engineering.
-    </p>
+    <p class="hero__role">PhD researcher · generative AI for DNA design · London</p>
 
     <nav class="links" aria-label="Profiles">
-      <a href="mailto:marc.amil@kcl.ac.uk">email</a>
-      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://substack.com/@maamil" target="_blank" rel="noopener">substack</a>
-      <a href="https://github.com/MarcAmil30" target="_blank" rel="noopener">github</a>
-      <a href="assets/Marc_Amil_CV.pdf" target="_blank" rel="noopener">cv&nbsp;(pdf)</a>
+      <a href="mailto:marc.amil@kcl.ac.uk"><svg class="ico"><use href="#i-mail"/></svg>Email</a>
+      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg>LinkedIn</a>
+      <a href="https://x.com/AmilMarc" target="_blank" rel="noopener"><svg class="ico"><use href="#i-x"/></svg>X</a>
+      <a href="https://substack.com/@maamil" target="_blank" rel="noopener"><svg class="ico"><use href="#i-substack"/></svg>Substack</a>
+      <a href="https://github.com/MarcAmil30" target="_blank" rel="noopener"><svg class="ico"><use href="#i-github"/></svg>GitHub</a>
     </nav>
-  </header>
 
-  <!-- ─────────── now ─────────── -->
-  <section id="now">
-    <h2 class="label">Now</h2>
-    <ul class="now-list">
-      <li>
-        <span class="now-list__k">Research</span>
-        <span class="now-list__v">Generative models for <em>de novo</em> DNA design and functional insight in synthetic biology — PhD with Dr&nbsp;Aleksej Zelezniak, KCL (2024–2027).</span>
-      </li>
-      <li>
-        <span class="now-list__k">Community</span>
-        <span class="now-list__v">Building a London <strong>AI&nbsp;×&nbsp;DNA</strong> research community across KCL, UCL, Imperial and the Francis Crick Institute, on a £4,000 Crick University Partnership grant.</span>
-      </li>
-      <li>
-        <span class="now-list__k">Writing</span>
-        <span class="now-list__v">Notes on generative biology and where machine learning actually helps at the bench — on <a href="https://substack.com/@maamil" target="_blank" rel="noopener">Substack</a>.</span>
-      </li>
-    </ul>
-  </section>
+    <p class="bio">
+      I build models that read and write DNA. I'm a PhD student with
+      <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">Dr&nbsp;Aleksej Zelezniak at King's College London</a>,
+      working on generative models for <em>de&nbsp;novo</em> DNA design and on using genomic
+      language models to predict and control gene expression. Before that: neurotechnology at
+      Imperial, computational protein engineering at UCL, and biosensor hardware at Nutrix.
+    </p>
+    <p class="bio">
+      I also run <strong>London AI&nbsp;×&nbsp;DNA</strong>, a research community across KCL, UCL,
+      Imperial and the Francis Crick Institute, and write
+      <a href="https://substack.com/@maamil" target="_blank" rel="noopener">Scripts to Sequences</a>
+      — notes on AI and biology, from papers to small projects.
+    </p>
+  </header>
 
   <!-- ─────────── work ─────────── -->
   <section id="work">
     <h2 class="label">Selected work</h2>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <rect x="18" y="20" width="124" height="16" rx="2" opacity=".35"/>
+          <path d="M26 20v16M38 20v16M50 20v16M62 20v16M74 20v16M86 20v16M98 20v16M110 20v16M122 20v16M134 20v16" opacity=".35"/>
+          <rect x="50" y="20" width="36" height="16" fill="currentColor" stroke="none" opacity=".5"/>
+          <path d="M18 72c8 0 8-18 16-18s8 26 16 26 8-32 16-32 8 22 16 22 8-14 16-14 8 18 16 18 8-10 16-10" opacity=".75"/>
+          <path d="M142 86v10a4 4 0 0 1-4 4H26a4 4 0 0 1-4-4v-8" opacity=".55"/>
+          <path d="M18 84l4 6 4-6" fill="currentColor" stroke="none" opacity=".55"/>
+          <rect x="18" y="104" width="124" height="10" rx="2" opacity=".2"/>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>GI × Proto — turning a genomic model into a sequence designer</h3>
-        <span class="tag tag--win">1st place</span>
-      </header>
-      <p class="card__meta">Genomic Intelligence Builder Challenge · 2026</p>
-      <p>
-        A closed-loop AI system that pairs a genomic foundation model with an optimiser to
-        design DNA for expression and cell-type specificity. Tested across 50 human genes and
-        1,500 enhancers: predicted expression improved in <strong>49/50</strong> genes, and
-        enhancer specificity could be steered between HepG2 and K562 cell types.
-      </p>
-      <ul class="chips"><li>genomic LMs</li><li>sequence design</li><li>closed-loop optimisation</li></ul>
+        <p class="item__meta">Genomic Intelligence Builder Challenge, 2026 · <strong>1st place</strong></p>
+        <p>
+          A closed-loop system pairing a genomic foundation model with an optimiser to design DNA
+          for expression and cell-type specificity. Across 50 human genes and 1,500 enhancers,
+          predicted expression improved in 49/50 genes, and enhancer specificity could be steered
+          between HepG2 and K562 cells.
+        </p>
+      </div>
     </article>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <rect x="14" y="18" width="132" height="12" rx="2" opacity=".3"/>
+          <rect x="52" y="18" width="24" height="12" fill="currentColor" stroke="none" opacity=".55"/>
+          <rect x="98" y="18" width="18" height="12" fill="currentColor" stroke="none" opacity=".55"/>
+          <path d="M60 38v12M104 38v12" opacity=".4" stroke-dasharray="3 3"/>
+          <path d="M74 56h16m0 0l-5-4m5 4l-5 4" opacity=".6"/>
+          <rect x="44" y="50" width="28" height="12" rx="2" opacity=".3"/>
+          <rect x="50" y="50" width="12" height="12" fill="currentColor" stroke="none" opacity=".55"/>
+          <rect x="92" y="50" width="26" height="12" rx="2" opacity=".3"/>
+          <rect x="98" y="50" width="10" height="12" fill="currentColor" stroke="none" opacity=".55"/>
+          <path d="M14 102c10 0 12-26 22-26s12 20 22 20 12-30 22-30 12 24 22 24 12-16 22-16 10 12 22 12" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>Shortening regulatory DNA without losing function</h3>
-      </header>
-      <p class="card__meta">King's College London · 2024–present</p>
-      <p>
-        Applied DeepMind's <strong>AlphaGenome</strong> to find and optimise the regulatory
-        elements that drive stable gene expression across human cell types — cutting sequence
-        length while preserving function. In parallel, trained LLMs that predict gene expression
-        in yeast from pre-trained genomic language model embeddings.
-      </p>
-      <ul class="chips"><li>AlphaGenome</li><li>regulatory elements</li><li>expression prediction</li></ul>
+        <p class="item__meta">King's College London, 2024 – present</p>
+        <p>
+          Used DeepMind's AlphaGenome to find and optimise the regulatory elements driving stable
+          gene expression across human cell types — cutting sequence length while preserving
+          function. Alongside it, LLMs that predict gene expression in yeast from pre-trained
+          genomic language model embeddings.
+        </p>
+      </div>
     </article>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M16 46h128" opacity=".3"/>
+          <circle cx="22" cy="46" r="5" opacity=".6"/><circle cx="38" cy="46" r="5" opacity=".6"/>
+          <circle cx="54" cy="46" r="5" opacity=".6"/><circle cx="70" cy="46" r="5" fill="currentColor" stroke="none" opacity=".55"/>
+          <circle cx="86" cy="46" r="5" opacity=".6"/><circle cx="102" cy="46" r="5" opacity=".6"/>
+          <circle cx="118" cy="46" r="5" fill="currentColor" stroke="none" opacity=".55"/><circle cx="134" cy="46" r="5" opacity=".6"/>
+          <path d="M62 30v32M110 30v32" opacity=".55" stroke-dasharray="4 3"/>
+          <path d="M16 80h38M70 80h30M110 80h34" opacity=".45" stroke-width="3"/>
+          <rect x="16" y="96" width="128" height="10" rx="2" opacity=".18"/>
+          <rect x="16" y="96" width="46" height="10" rx="2" fill="currentColor" stroke="none" opacity=".35"/>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>CLAM — mining 1,011 yeast genomes for antimicrobial peptides</h3>
-      </header>
-      <p class="card__meta">University College London · 2023–2024</p>
-      <p>
-        A Python pipeline that simulates <em>in silico</em> peptide cleavage and predicts
-        antimicrobial activity, screening 1,011 <em>S. cerevisiae</em> genomes for novel AMPs.
-        Fine-tuned <strong>ESM2</strong> for multi-label activity prediction across 22 functional
-        classes — 99.2% accuracy for anti-MRSA and 98.9% for antibiofilm activity, beating the
-        existing classifiers.
-      </p>
-      <ul class="chips"><li>ESM2</li><li>protein language models</li><li>pipeline</li></ul>
+        <p class="item__meta">University College London, 2023 – 2024</p>
+        <p>
+          A Python pipeline that simulates <em>in silico</em> peptide cleavage and predicts
+          antimicrobial activity, screening 1,011 <em>S. cerevisiae</em> genomes for novel AMPs.
+          Fine-tuned ESM2 for multi-label prediction across 22 functional classes — 99.2% accuracy
+          for anti-MRSA and 98.9% for antibiofilm, beating existing classifiers.
+        </p>
+      </div>
     </article>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+          <g opacity=".3"><rect x="20" y="22" width="120" height="76" rx="2"/>
+          <path d="M44 22v76M68 22v76M92 22v76M116 22v76M20 41h120M20 60h120M20 79h120"/></g>
+          <g fill="currentColor" stroke="none">
+            <rect x="20" y="22" width="24" height="19" opacity=".15"/><rect x="44" y="41" width="24" height="19" opacity=".55"/>
+            <rect x="68" y="22" width="24" height="19" opacity=".3"/><rect x="92" y="60" width="24" height="19" opacity=".7"/>
+            <rect x="116" y="41" width="24" height="19" opacity=".22"/><rect x="44" y="79" width="24" height="19" opacity=".4"/>
+            <rect x="92" y="22" width="24" height="19" opacity=".48"/><rect x="20" y="60" width="24" height="19" opacity=".25"/>
+          </g>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>InFinity 1.0 — open-source affinity maturation</h3>
-      </header>
-      <p class="card__meta">iGEM · 2022</p>
-      <p>
-        An open-source tool, built in three weeks, for increasing protein affinity to a chosen
-        ligand at high throughput. Part of the work published as an open framework for exploring
-        mutational landscapes <em>in silico</em>. I also led the design and build of the team
-        <a href="https://2022.igem.wiki/imperial-college-london/" target="_blank" rel="noopener">wiki</a>
-        (HTML/CSS/JS), nominated <strong>Best Wiki</strong> out of 200+ teams.
-      </p>
-      <ul class="chips"><li>open source</li><li>protein engineering</li><li>web</li></ul>
+        <p class="item__meta">iGEM, 2022</p>
+        <p>
+          An open-source tool, built in three weeks, for increasing protein affinity to a chosen
+          ligand at high throughput — published as part of an open framework for exploring
+          mutational landscapes <em>in silico</em>. I also designed and built the team
+          <a href="https://2022.igem.wiki/imperial-college-london/" target="_blank" rel="noopener">wiki</a>,
+          nominated Best Wiki out of 200+ teams.
+        </p>
+      </div>
     </article>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <rect x="24" y="20" width="112" height="44" rx="4" opacity=".35"/>
+          <path d="M38 34h26M38 44h26M38 54h18" opacity=".45" stroke-width="3"/>
+          <path d="M84 28v28M96 28v28M108 28v28M120 28v28" opacity=".55" stroke-width="2.5"/>
+          <path d="M84 28h36" opacity=".55"/>
+          <path d="M24 92c8 0 10-14 18-14s10 10 18 10 10-18 18-18 10 14 18 14 10-8 18-8 12 8 22 8" opacity=".7"/>
+          <circle cx="60" cy="88" r="3" fill="currentColor" stroke="none" opacity=".8"/>
+          <circle cx="114" cy="84" r="3" fill="currentColor" stroke="none" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>cortiSense — a wearable cortisol biosensor</h3>
-      </header>
-      <p class="card__meta">Nutrix · 2021–2024</p>
-      <p>
-        Fabricated gold sensing components by lithography and microfabrication for a cortisol
-        biosensor. Separately, collected and analysed 1,500+ time-series glucose datasets and
-        supported ML model development for glucose prediction in Python.
-      </p>
-      <ul class="chips"><li>microfabrication</li><li>time-series ML</li><li>hardware</li></ul>
+        <p class="item__meta">Nutrix, 2021 – 2024</p>
+        <p>
+          Fabricated the gold sensing components by lithography and microfabrication. Separately,
+          collected and analysed 1,500+ time-series glucose datasets and supported ML model
+          development for glucose prediction in Python.
+        </p>
+      </div>
     </article>
 
-    <article class="card">
-      <header class="card__head">
+    <article class="item">
+      <div class="item__fig">
+        <svg viewBox="0 0 160 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <rect x="18" y="18" width="124" height="84" rx="4" opacity=".35"/>
+          <path d="M18 40h40a12 12 0 0 1 12 12v16a12 12 0 0 0 12 12h60" opacity=".5"/>
+          <path d="M18 62h28a12 12 0 0 0 12-12V34a12 12 0 0 1 12-12h50" opacity=".5"/>
+          <circle cx="58" cy="52" r="7" opacity=".7"/>
+          <path d="M58 45v-8M58 59v8M51 52h-8M65 52h8M53 47l-6-6M63 57l6 6" opacity=".55"/>
+          <circle cx="110" cy="72" r="6" opacity=".7"/>
+          <path d="M110 66v-7M110 78v6M104 72h-7M116 72h7" opacity=".55"/>
+          <path d="M30 94h18M58 94h12" opacity=".4" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="item__body">
         <h3>Living electrode-on-a-chip</h3>
-      </header>
-      <p class="card__meta">Imperial College London · MRes, Distinction</p>
-      <p>
-        A microfluidic, microphysiological model for studying bioelectronic neural interfaces
-        <em>in vitro</em> with iPSC-derived neurons — including hydrogel scaffolds for stem cell
-        development and confocal imaging of neuronal differentiation and innervation.
-      </p>
-      <ul class="chips"><li>microfluidics</li><li>iPSC neurons</li><li>confocal</li></ul>
+        <p class="item__meta">Imperial College London, MRes (Distinction), 2022 – 2023</p>
+        <p>
+          A microfluidic, microphysiological model for studying bioelectronic neural interfaces
+          <em>in vitro</em> with iPSC-derived neurons — including hydrogel scaffolds for stem cell
+          development and confocal imaging of neuronal differentiation and innervation.
+        </p>
+      </div>
     </article>
-  </section>
-
-  <!-- ─────────── experience ─────────── -->
-  <section id="experience">
-    <h2 class="label">Experience</h2>
-    <ol class="timeline">
-      <li>
-        <span class="timeline__when">2024 — present</span>
-        <div class="timeline__what">
-          <strong>PhD Researcher</strong> · King's College London
-          <span class="timeline__sub">Zelezniak Lab — generative models for DNA design</span>
-        </div>
-      </li>
-      <li>
-        <span class="timeline__when">2026 — present</span>
-        <div class="timeline__what">
-          <strong>Organiser, London AI × DNA</strong> · KCL × Francis Crick Institute
-          <span class="timeline__sub">£4,000 Crick partnership grant; 60+ participant AlphaGenome hackathon</span>
-        </div>
-      </li>
-      <li>
-        <span class="timeline__when">2023 — 2024</span>
-        <div class="timeline__what">
-          <strong>PhD Researcher</strong> · University College London
-          <span class="timeline__sub">Dikicioglu Lab — computational AMP discovery</span>
-        </div>
-      </li>
-      <li>
-        <span class="timeline__when">2022 — 2023</span>
-        <div class="timeline__what">
-          <strong>MRes Researcher</strong> · Imperial College London
-          <span class="timeline__sub">Rylie Green Lab — neural interfaces and microfluidics</span>
-        </div>
-      </li>
-      <li>
-        <span class="timeline__when">2021 — 2024</span>
-        <div class="timeline__what">
-          <strong>Biosensor Engineer</strong> · Nutrix, Poland
-          <span class="timeline__sub">Cortisol and glucose biosensing; ML for glucose prediction</span>
-        </div>
-      </li>
-      <li>
-        <span class="timeline__when">2021 — 2022</span>
-        <div class="timeline__what">
-          <strong>Computational modelling &amp; outreach</strong> · iGEM
-          <span class="timeline__sub">Gold medal, Top 10 undergraduate teams; raised £50,000+ in 3 months</span>
-        </div>
-      </li>
-    </ol>
   </section>
 
   <!-- ─────────── publications ─────────── -->
@@ -206,95 +223,84 @@
     <h2 class="label">Publications</h2>
     <ol class="pubs">
       <li>
-        <p class="pubs__title">
-          <a href="https://doi.org/10.1002/9783527850532.ch3" target="_blank" rel="noopener">
-            Machine-Guided Approaches for Synthetic Biology Part Design</a>
-        </p>
-        <p class="pubs__meta">
-          <strong>Amil, M.</strong>, Ventimiglia, L.N. &amp; Zelezniak, A. (2026).
-          In <em>Machine Learning and Big Data-enabled Biotechnology</em>, H.S. Alper (Ed.). Book chapter.
-        </p>
+        <a href="https://doi.org/10.1002/9783527850532.ch3" target="_blank" rel="noopener">Machine-Guided Approaches for Synthetic Biology Part Design</a>
+        <span class="pubs__meta"><strong>Amil, M.</strong>, Ventimiglia, L.N. &amp; Zelezniak, A. (2026).
+        In <em>Machine Learning and Big Data-enabled Biotechnology</em>, H.S. Alper (Ed.). Book chapter.</span>
       </li>
       <li>
-        <p class="pubs__title">
-          Protein engineering in the computational age: an open source framework for exploring
-          mutational landscapes <em>in silico</em>
-        </p>
-        <p class="pubs__meta">
-          Bamezai, S., Maresca di Serracapriola, G., Morris, F., Hildebrandt, R.,
-          <strong>Amil, M.A.S.</strong>, Sporadicate iGEM Team, … &amp; Ledesma-Amaro, R. (2023).
-          <em>Engineering Biology</em>.
-        </p>
+        Protein engineering in the computational age: an open source framework for exploring
+        mutational landscapes <em>in silico</em>
+        <span class="pubs__meta">Bamezai, S., Maresca di Serracapriola, G., Morris, F., Hildebrandt, R.,
+        <strong>Amil, M.A.S.</strong>, Sporadicate iGEM Team, … &amp; Ledesma-Amaro, R. (2023). <em>Engineering Biology</em>.</span>
       </li>
+    </ol>
+  </section>
+
+  <!-- ─────────── experience ─────────── -->
+  <section id="experience">
+    <h2 class="label">Experience</h2>
+    <ol class="rows">
+      <li><span class="rows__when">2024 — present</span>
+        <span class="rows__what"><strong>PhD Researcher</strong>, King's College London — Zelezniak Lab</span></li>
+      <li><span class="rows__when">2026 — present</span>
+        <span class="rows__what"><strong>Organiser, London AI × DNA</strong>, KCL × Francis Crick Institute — £4,000 partnership grant, 60+ participant AlphaGenome hackathon</span></li>
+      <li><span class="rows__when">2023 — 2024</span>
+        <span class="rows__what"><strong>PhD Researcher</strong>, University College London — Dikicioglu Lab</span></li>
+      <li><span class="rows__when">2022 — 2023</span>
+        <span class="rows__what"><strong>MRes Researcher</strong>, Imperial College London — Rylie Green Lab</span></li>
+      <li><span class="rows__when">2021 — 2024</span>
+        <span class="rows__what"><strong>Biosensor Engineer</strong>, Nutrix (Poland)</span></li>
+      <li><span class="rows__when">2021 — 2022</span>
+        <span class="rows__what"><strong>Computational modelling &amp; outreach</strong>, iGEM — Gold medal, Top 10 undergraduate teams</span></li>
+    </ol>
+  </section>
+
+  <!-- ─────────── education ─────────── -->
+  <section id="education">
+    <h2 class="label">Education</h2>
+    <ol class="rows">
+      <li><span class="rows__when">2024 — 2027</span>
+        <span class="rows__what"><strong>PhD</strong>, King's College London — generative AI in synthetic biology</span></li>
+      <li><span class="rows__when">2022 — 2023</span>
+        <span class="rows__what"><strong>MRes Neurotechnology</strong>, Imperial College London — Distinction</span></li>
+      <li><span class="rows__when">2018 — 2022</span>
+        <span class="rows__what"><strong>BSc Biotechnology with Research Abroad</strong>, Imperial College London</span></li>
     </ol>
   </section>
 
   <!-- ─────────── grants & awards ─────────── -->
   <section id="awards">
     <h2 class="label">Grants &amp; awards</h2>
-    <div class="grid2">
-      <div>
-        <h3 class="sublabel">Funding raised</h3>
-        <ul class="plain">
-          <li><strong>£50,000</strong> — SynbiCITE Proof-of-Concept Grant</li>
-          <li><strong>CHF 10,000</strong> — Lonza BioIncubate Program</li>
-          <li><strong>£4,000</strong> — Francis Crick University Partnership Networking Fund</li>
-          <li><strong>$2,500</strong> — iGEM Team Impact Grant</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="sublabel">Recognition</h3>
-        <ul class="plain">
-          <li>1st place — Genomic Intelligence Builder Challenge</li>
-          <li>iGEM 2022 — Gold Medal, Top 10 undergraduate teams</li>
-          <li>2nd of 700+ — Imperial Global Challenge Lab (dengue IoT/AI)</li>
-          <li>3rd place — EraCoBiotech public engagement</li>
-          <li>President's Undergraduate Scholarship, Imperial College London</li>
-          <li>Swiss European Mobility Programme Scholarship</li>
-        </ul>
-      </div>
-    </div>
+    <ul class="plain">
+      <li><strong>£50,000</strong> — SynbiCITE Proof-of-Concept Grant</li>
+      <li><strong>CHF 10,000</strong> — Lonza BioIncubate Program</li>
+      <li><strong>£4,000</strong> — Francis Crick University Partnership Networking Fund</li>
+      <li><strong>$2,500</strong> — iGEM Team Impact Grant</li>
+      <li>1st place — Genomic Intelligence Builder Challenge</li>
+      <li>2nd of 700+ — Imperial Global Challenge Lab (dengue IoT/AI); 1st in Communicable Diseases</li>
+      <li>President's Undergraduate Scholarship &amp; Swiss European Mobility Scholarship, Imperial College London</li>
+    </ul>
   </section>
 
   <!-- ─────────── toolkit ─────────── -->
   <section id="toolkit">
     <h2 class="label">Toolkit</h2>
-    <div class="grid2">
-      <div>
-        <h3 class="sublabel">Code</h3>
-        <ul class="chips chips--big">
-          <li>Python</li><li>R</li><li>bash</li><li>MATLAB</li><li>HTML/CSS</li><li>LaTeX</li><li>Git</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="sublabel">Stack</h3>
-        <ul class="chips chips--big">
-          <li>PyTorch-era LLMs</li><li>ESM2</li><li>AlphaGenome</li><li>NumPy</li><li>Pandas</li><li>BioPython</li><li>COMSOL</li><li>Claude Code</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─────────── contact ─────────── -->
-  <section id="contact">
-    <h2 class="label">Get in touch</h2>
-    <p class="contact__line">
-      Happy to talk about generative models for biology, DNA design, or anything
-      at the point where ML meets the wet lab.
-    </p>
-    <p class="contact__links">
-      <a href="mailto:marc.amil@kcl.ac.uk">marc.amil@kcl.ac.uk</a>
-      <span class="sep">/</span>
-      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener">LinkedIn</a>
-      <span class="sep">/</span>
-      <a href="https://substack.com/@maamil" target="_blank" rel="noopener">Substack</a>
+    <p class="tools">
+      Python · R · bash · MATLAB · HTML/CSS · LaTeX · Git ·
+      ESM2 · AlphaGenome · genomic language models · NumPy · Pandas · BioPython · COMSOL · Claude Code
     </p>
   </section>
 
+  <!-- ─────────── footer ─────────── -->
   <footer class="foot">
-    <span>London, UK</span>
-    <span class="foot__dot">·</span>
-    <span>Built with HTML, CSS and no framework</span>
+    <span>Marc Amil · London, UK</span>
+    <nav class="foot__links" aria-label="Profiles">
+      <a href="mailto:marc.amil@kcl.ac.uk" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a>
+      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+      <a href="https://x.com/AmilMarc" target="_blank" rel="noopener" aria-label="X"><svg class="ico"><use href="#i-x"/></svg></a>
+      <a href="https://substack.com/@maamil" target="_blank" rel="noopener" aria-label="Substack"><svg class="ico"><use href="#i-substack"/></svg></a>
+      <a href="https://github.com/MarcAmil30" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+    </nav>
   </footer>
 
 </main>
