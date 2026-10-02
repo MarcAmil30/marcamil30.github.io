@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marc Amil</title>
+<meta name="description" content="Marc Amil — PhD researcher at King's College London working on generative AI for DNA design and synthetic biology.">
+<meta property="og:title" content="Marc Amil">
+<meta property="og:description" content="PhD researcher building generative models for de novo DNA design.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+</head>
+<body>
+
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle colour theme">
+  <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+</button>
+
+<main class="wrap">
+
+  <!-- ─────────── header ─────────── -->
+  <header class="hero">
+    <h1>Marc Amil</h1>
+    <p class="hero__role">PhD researcher — generative AI for DNA design</p>
+    <p class="hero__blurb">
+      I build models that read and write DNA. Currently at
+      <a href="https://www.kcl.ac.uk/" target="_blank" rel="noopener">King's College London</a>,
+      where I work on generative models for <em>de&nbsp;novo</em> DNA design and on using
+      genomic language models to predict and control gene expression. Before that:
+      neurotechnology, microfluidics, biosensors, and a lot of protein engineering.
+    </p>
+
+    <nav class="links" aria-label="Profiles">
+      <a href="mailto:marc.amil@kcl.ac.uk">email</a>
+      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://substack.com/@maamil" target="_blank" rel="noopener">substack</a>
+      <a href="https://github.com/MarcAmil30" target="_blank" rel="noopener">github</a>
+      <a href="assets/Marc_Amil_CV.pdf" target="_blank" rel="noopener">cv&nbsp;(pdf)</a>
+    </nav>
+  </header>
+
+  <!-- ─────────── now ─────────── -->
+  <section id="now">
+    <h2 class="label">Now</h2>
+    <ul class="now-list">
+      <li>
+        <span class="now-list__k">Research</span>
+        <span class="now-list__v">Generative models for <em>de novo</em> DNA design and functional insight in synthetic biology — PhD with Dr&nbsp;Aleksej Zelezniak, KCL (2024–2027).</span>
+      </li>
+      <li>
+        <span class="now-list__k">Community</span>
+        <span class="now-list__v">Building a London <strong>AI&nbsp;×&nbsp;DNA</strong> research community across KCL, UCL, Imperial and the Francis Crick Institute, on a £4,000 Crick University Partnership grant.</span>
+      </li>
+      <li>
+        <span class="now-list__k">Writing</span>
+        <span class="now-list__v">Notes on generative biology and where machine learning actually helps at the bench — on <a href="https://substack.com/@maamil" target="_blank" rel="noopener">Substack</a>.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ─────────── work ─────────── -->
+  <section id="work">
+    <h2 class="label">Selected work</h2>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>GI × Proto — turning a genomic model into a sequence designer</h3>
+        <span class="tag tag--win">1st place</span>
+      </header>
+      <p class="card__meta">Genomic Intelligence Builder Challenge · 2026</p>
+      <p>
+        A closed-loop AI system that pairs a genomic foundation model with an optimiser to
+        design DNA for expression and cell-type specificity. Tested across 50 human genes and
+        1,500 enhancers: predicted expression improved in <strong>49/50</strong> genes, and
+        enhancer specificity could be steered between HepG2 and K562 cell types.
+      </p>
+      <ul class="chips"><li>genomic LMs</li><li>sequence design</li><li>closed-loop optimisation</li></ul>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>Shortening regulatory DNA without losing function</h3>
+      </header>
+      <p class="card__meta">King's College London · 2024–present</p>
+      <p>
+        Applied DeepMind's <strong>AlphaGenome</strong> to find and optimise the regulatory
+        elements that drive stable gene expression across human cell types — cutting sequence
+        length while preserving function. In parallel, trained LLMs that predict gene expression
+        in yeast from pre-trained genomic language model embeddings.
+      </p>
+      <ul class="chips"><li>AlphaGenome</li><li>regulatory elements</li><li>expression prediction</li></ul>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>CLAM — mining 1,011 yeast genomes for antimicrobial peptides</h3>
+      </header>
+      <p class="card__meta">University College London · 2023–2024</p>
+      <p>
+        A Python pipeline that simulates <em>in silico</em> peptide cleavage and predicts
+        antimicrobial activity, screening 1,011 <em>S. cerevisiae</em> genomes for novel AMPs.
+        Fine-tuned <strong>ESM2</strong> for multi-label activity prediction across 22 functional
+        classes — 99.2% accuracy for anti-MRSA and 98.9% for antibiofilm activity, beating the
+        existing classifiers.
+      </p>
+      <ul class="chips"><li>ESM2</li><li>protein language models</li><li>pipeline</li></ul>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>InFinity 1.0 — open-source affinity maturation</h3>
+      </header>
+      <p class="card__meta">iGEM · 2022</p>
+      <p>
+        An open-source tool, built in three weeks, for increasing protein affinity to a chosen
+        ligand at high throughput. Part of the work published as an open framework for exploring
+        mutational landscapes <em>in silico</em>. I also led the design and build of the team
+        <a href="https://2022.igem.wiki/imperial-college-london/" target="_blank" rel="noopener">wiki</a>
+        (HTML/CSS/JS), nominated <strong>Best Wiki</strong> out of 200+ teams.
+      </p>
+      <ul class="chips"><li>open source</li><li>protein engineering</li><li>web</li></ul>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>cortiSense — a wearable cortisol biosensor</h3>
+      </header>
+      <p class="card__meta">Nutrix · 2021–2024</p>
+      <p>
+        Fabricated gold sensing components by lithography and microfabrication for a cortisol
+        biosensor. Separately, collected and analysed 1,500+ time-series glucose datasets and
+        supported ML model development for glucose prediction in Python.
+      </p>
+      <ul class="chips"><li>microfabrication</li><li>time-series ML</li><li>hardware</li></ul>
+    </article>
+
+    <article class="card">
+      <header class="card__head">
+        <h3>Living electrode-on-a-chip</h3>
+      </header>
+      <p class="card__meta">Imperial College London · MRes, Distinction</p>
+      <p>
+        A microfluidic, microphysiological model for studying bioelectronic neural interfaces
+        <em>in vitro</em> with iPSC-derived neurons — including hydrogel scaffolds for stem cell
+        development and confocal imaging of neuronal differentiation and innervation.
+      </p>
+      <ul class="chips"><li>microfluidics</li><li>iPSC neurons</li><li>confocal</li></ul>
+    </article>
+  </section>
+
+  <!-- ─────────── experience ─────────── -->
+  <section id="experience">
+    <h2 class="label">Experience</h2>
+    <ol class="timeline">
+      <li>
+        <span class="timeline__when">2024 — present</span>
+        <div class="timeline__what">
+          <strong>PhD Researcher</strong> · King's College London
+          <span class="timeline__sub">Zelezniak Lab — generative models for DNA design</span>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__when">2026 — present</span>
+        <div class="timeline__what">
+          <strong>Organiser, London AI × DNA</strong> · KCL × Francis Crick Institute
+          <span class="timeline__sub">£4,000 Crick partnership grant; 60+ participant AlphaGenome hackathon</span>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__when">2023 — 2024</span>
+        <div class="timeline__what">
+          <strong>PhD Researcher</strong> · University College London
+          <span class="timeline__sub">Dikicioglu Lab — computational AMP discovery</span>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__when">2022 — 2023</span>
+        <div class="timeline__what">
+          <strong>MRes Researcher</strong> · Imperial College London
+          <span class="timeline__sub">Rylie Green Lab — neural interfaces and microfluidics</span>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__when">2021 — 2024</span>
+        <div class="timeline__what">
+          <strong>Biosensor Engineer</strong> · Nutrix, Poland
+          <span class="timeline__sub">Cortisol and glucose biosensing; ML for glucose prediction</span>
+        </div>
+      </li>
+      <li>
+        <span class="timeline__when">2021 — 2022</span>
+        <div class="timeline__what">
+          <strong>Computational modelling &amp; outreach</strong> · iGEM
+          <span class="timeline__sub">Gold medal, Top 10 undergraduate teams; raised £50,000+ in 3 months</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─────────── publications ─────────── -->
+  <section id="publications">
+    <h2 class="label">Publications</h2>
+    <ol class="pubs">
+      <li>
+        <p class="pubs__title">
+          <a href="https://doi.org/10.1002/9783527850532.ch3" target="_blank" rel="noopener">
+            Machine-Guided Approaches for Synthetic Biology Part Design</a>
+        </p>
+        <p class="pubs__meta">
+          <strong>Amil, M.</strong>, Ventimiglia, L.N. &amp; Zelezniak, A. (2026).
+          In <em>Machine Learning and Big Data-enabled Biotechnology</em>, H.S. Alper (Ed.). Book chapter.
+        </p>
+      </li>
+      <li>
+        <p class="pubs__title">
+          Protein engineering in the computational age: an open source framework for exploring
+          mutational landscapes <em>in silico</em>
+        </p>
+        <p class="pubs__meta">
+          Bamezai, S., Maresca di Serracapriola, G., Morris, F., Hildebrandt, R.,
+          <strong>Amil, M.A.S.</strong>, Sporadicate iGEM Team, … &amp; Ledesma-Amaro, R. (2023).
+          <em>Engineering Biology</em>.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ─────────── grants & awards ─────────── -->
+  <section id="awards">
+    <h2 class="label">Grants &amp; awards</h2>
+    <div class="grid2">
+      <div>
+        <h3 class="sublabel">Funding raised</h3>
+        <ul class="plain">
+          <li><strong>£50,000</strong> — SynbiCITE Proof-of-Concept Grant</li>
+          <li><strong>CHF 10,000</strong> — Lonza BioIncubate Program</li>
+          <li><strong>£4,000</strong> — Francis Crick University Partnership Networking Fund</li>
+          <li><strong>$2,500</strong> — iGEM Team Impact Grant</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="sublabel">Recognition</h3>
+        <ul class="plain">
+          <li>1st place — Genomic Intelligence Builder Challenge</li>
+          <li>iGEM 2022 — Gold Medal, Top 10 undergraduate teams</li>
+          <li>2nd of 700+ — Imperial Global Challenge Lab (dengue IoT/AI)</li>
+          <li>3rd place — EraCoBiotech public engagement</li>
+          <li>President's Undergraduate Scholarship, Imperial College London</li>
+          <li>Swiss European Mobility Programme Scholarship</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── toolkit ─────────── -->
+  <section id="toolkit">
+    <h2 class="label">Toolkit</h2>
+    <div class="grid2">
+      <div>
+        <h3 class="sublabel">Code</h3>
+        <ul class="chips chips--big">
+          <li>Python</li><li>R</li><li>bash</li><li>MATLAB</li><li>HTML/CSS</li><li>LaTeX</li><li>Git</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="sublabel">Stack</h3>
+        <ul class="chips chips--big">
+          <li>PyTorch-era LLMs</li><li>ESM2</li><li>AlphaGenome</li><li>NumPy</li><li>Pandas</li><li>BioPython</li><li>COMSOL</li><li>Claude Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── contact ─────────── -->
+  <section id="contact">
+    <h2 class="label">Get in touch</h2>
+    <p class="contact__line">
+      Happy to talk about generative models for biology, DNA design, or anything
+      at the point where ML meets the wet lab.
+    </p>
+    <p class="contact__links">
+      <a href="mailto:marc.amil@kcl.ac.uk">marc.amil@kcl.ac.uk</a>
+      <span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/marc-amil-9500b718a/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">/</span>
+      <a href="https://substack.com/@maamil" target="_blank" rel="noopener">Substack</a>
+    </p>
+  </section>
+
+  <footer class="foot">
+    <span>London, UK</span>
+    <span class="foot__dot">·</span>
+    <span>Built with HTML, CSS and no framework</span>
+  </footer>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
